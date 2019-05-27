@@ -6,7 +6,6 @@ Larger(er)Screens */
 /* 1. Imports */
 @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
 
-@import url('normalize.css');
 
 
 /*2.General Rules*/
@@ -15,5 +14,12 @@ h1,h2,h3,h4,h5,h6{
 }
 
 h1 {
-    color: organge;
+    color: black;
 }
+
+div {
+    width: 300px;
+    border: 15px solid blue;
+    padding: 50px;
+    margin: 20px;
+  }
