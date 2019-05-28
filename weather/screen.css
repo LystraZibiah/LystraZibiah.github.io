@@ -21,7 +21,7 @@ html{
  }
 
 
- #temp > h1 {
+ #weather h1 {
     text-align: center;
     list-style: none;
     display: flex;
