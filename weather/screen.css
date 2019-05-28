@@ -25,12 +25,14 @@ html{
     text-align: center;
     list-style: none;
     display: flex;
-    flex-direction: row;
-    color: black;
+
 }
 
 .header {
     width: 50px;
     display: inline-block;
     background-color: #0e89d5
+}
+.do li{
+    display: inline;
 }
