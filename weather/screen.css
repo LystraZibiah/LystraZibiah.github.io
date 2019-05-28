@@ -21,11 +21,15 @@ html{
  }
 
 
-h1 {
+ #temp > h1 {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
     color: black;
 }
 
-header {
+.header {
     width: 100px;
     display: inline-block;
     background-color: #0e89d5
