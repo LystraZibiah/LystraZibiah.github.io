@@ -29,10 +29,51 @@ html{
 }
 
 .header {
-    width: 50px;
-    display: inline-block;
-    background-color: #0e89d5
+    display: flex;
+    background-color: #0e89d5;
 }
 .do li{
     display: inline;
+}
+
+#copy {
+    display: flex;
+    background-color: #0e89d5; 
+}
+
+#place h2{
+    display:flex;
+    background-color:white;
+}
+/* #temp h2; */
+
+.tiles {
+    border: 1px ridge black;
+    border-radius: 25px;
+    text-align: center;
+    background-color:darkgray;
+}
+/* #wind h2; */
+/* #rain h2; */
+.miles {
+    position: relative;
+    bottom: -134px;
+}
+#links {
+position:fixed;
+bottom:-18px;
+}
+#style{
+    list-style-type:none;
+    display: flex;
+    
+}
+#style li{
+    margin-right: 10px;
+    
+}
+#style a {
+    color: white;
+    text-align: center;
+    
 }

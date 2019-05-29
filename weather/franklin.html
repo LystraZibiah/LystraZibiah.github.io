@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,66 +9,80 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="screen.css">
 </head>
+
 <body>
     <header class="header">
-    <img src="weather-site-images/images/logo.jpg" alt="logo">
-   <h1 id="weather">The Weather Site</h1>
-   <nav>
-   <ul>
-    <li class="do"><a href='#'>Current</a></li>
-     <li> <a href='#'>Search</a></li>
-     <li><a href='#'>Franklin</a></li>
-     <li><a href='#'>Greenville</a></li>
-    </ul>
-</nav>
-</header>
-<main>
-<h2><b>Franklin, Idaho</b></h2>
-<ul>
-    <li><b>Zip:</b>83237</li>
-    <li><b>Elevation:</b>1514.246</li>
-    <li><b>Location:</b>42.07 &deg;</li>
-    <li><b>Longitude:</b> 111.79</li>   
-     <li><b>Latitude</b>:42.07</li>
-</ul>
-<h2><b>Temperature:40 &deg;F</b></h2>
-<img src="weather-site-images/images/fog.jpg" alt="fog" height="300" width="300">
-<ul>    
-    <li><p><b>High: 64</b> &deg;F <b>Low:21</b> &deg;F</li>
-<li>Precip: 0</li>
-</ul>
-<h2><b>Wind:5 mph</b></h2>
-<img src="weather-site-images/images/wind-pointer.png" alt="wind" height="300" width="300">
- <ul>
-     <li><b>Direction:</b> SW</li>
-     <li><b>Gusts:</b> 10-12</li>
-</ul>
-<h2> Rain</h2>
-<img src="weather-site-images/images/rain.jpg" alt="clear" height="300" width="300">
-<ul>
-</ul>
-<h2>Hourly Forecast</h2>
-<ul>
-<li><b>10am:</b>41&deg;F</li>
-<li><b>11am:</b>41&deg;F</li>
-<li><b>12am:</b>41&deg;F</li>
-<li><b>1pm:</b>41&deg;F</li>
-<li><b>2pm:</b>41&deg;F</li>
-<li><b>3pm:</b>41&deg;F</li>
-<li><b>4pm:</b>42&deg;F</li>
-<li><b>5pm:</b>42&deg;F</li>
-<li><b>6pm:</b>46&deg;F</li>
-<li><b>7pm:</b>49&deg;F</li>
-<li><b>8pm:</b>52&deg;F</li>
-<li><b>9pm:</b>51&deg;F</li>
-<li><b>10pm:</b>55&deg;F</li>
-<li><b>11pm:</b> 41&deg;F</li>
-<li><b>12am:</b> 41&deg;F</li>
-</ul>
+        <img src="weather-site-images/images/logo.jpg" alt="logo">
+        <h1 id="weather">The Weather Site</h1>
 
-</main>
-<footer>
- <p>&copy; Franklin Weather 2019</p>
-</footer>
+    </header>
+    <nav id ="links">
+        <ul id ="style">
+            <li class="do"><a href='#'>Current</a></li>
+            <li> <a href='#'>Search</a></li>
+            <li><a href='#'>Franklin</a></li>
+            <li><a href='#'>Greenville</a></li>
+        </ul>
+    </nav>
+    <main id="page">
+        <h2 id="place"><b>Franklin, Idaho</b></h2>
+        <p>
+            <b>Zip:</b>83237|
+            <b>Elevation:</b>1514.246|
+            <b>Location:</b>|42.07 &deg;
+            <b>Longitude:</b> 111.79|
+            <b>Latitude</b>:42.07|
+        </p>
+        <section id="temp" class ="tiles">
+            <h2><b>Temperature</b></h2>
+            <h2><strong>40&deg;F</strong></h2>
+        
+            
+                    <p><b>High 64</b> &deg;F <b>Low 21</b> &deg;F</p>
+                <p>Precip: 0</p>
+        </section>
+
+        <section id ="wind" class ="tiles">
+        <h2><b>Wind</b></h2>
+        <p class="miles"><b>5mp</b></p> 
+        <img src="weather-site-images/images/wind-pointer.png" alt="wind" height="200" width="200">
+         
+           <p><b>Direction: SW</b></p>
+        <p><b>Gusts:10-12</b></p>
+            
+        
+        </section>
+
+        <section id ="rain" class="tiles">
+            <h2> Rain</h2>
+            <img src="weather-site-images/images/rain.jpg" alt="rain" height="200" width="200">
+        </section>
+        <ul>
+        </ul>
+        <section id ="forecast" class= "tiles">
+        <h2>Hourly Forecast</h2>
+        <p> 10am:41&deg;F|
+            11am:41&deg;F|
+            12am:41&deg;F|
+            1pm:41&deg;F|
+            2pm:41&deg;F|
+            3pm:41&deg;F|
+            4pm:42&deg;F|
+            5pm:42&deg;F|
+            6pm:46&deg;F|
+            7pm:49&deg;F|
+            8pm:52&deg;F|
+            9pm:51&deg;F|
+            10pm:55&deg;F|
+            11pm:41&deg;F|
+            12am:41&deg;F|
+        </p>
+        </section>
+
+    </main>
+    <footer id="copy">
+        <p>&copy; Franklin Weather 2019</p>
+    </footer>
 </body>
+
 </html>
