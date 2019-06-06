@@ -1,6 +1,3 @@
 /* large wire frame */
-#picture {
-    @media (min-width: 41.67em) {
-        body {
-            font-size: 1.5vw;
+
 }
