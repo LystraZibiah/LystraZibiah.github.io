@@ -7,12 +7,19 @@
 
 
 /*2.General Rules*/
-h1,h2,h3,h4,h5,h6{
+h1{
     font-family:Sanista, sans-serif;
-    
-}
+    }
 
 .name{
     font-size: 18px;
     /*	line-height: 1.25;*/
 } 
+
+.pictures {
+    width:400px;
+    height:400px;
+}
+
+
+
