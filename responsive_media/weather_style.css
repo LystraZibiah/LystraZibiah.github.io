@@ -13,13 +13,15 @@ h1{
 
 .name{
     font-size: 18px;
+    display:none;
     /*	line-height: 1.25;*/
 } 
 
-.pictures {
-    width:400px;
-    height:400px;
-}
 
 
 
+
+@media (min-width: 800px) {
+	body {
+        font-size: 1.25em;
+    }
