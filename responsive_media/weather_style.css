@@ -19,9 +19,16 @@ h1{
 
 
 
-
+/* large wide frame */
 
 @media (min-width: 800px) {
 	body {
-        font-size: 1.25em;
-    }
+    font-size: 1.25em;
+    }   
+.small{
+    display: none;
+}
+.name{
+    display:initial;
+}
+}
