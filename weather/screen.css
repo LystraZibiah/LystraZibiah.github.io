@@ -51,7 +51,7 @@ html{
     border: 1px ridge black;
     border-radius: 10px;
     text-align: center;
-    background-color:(200,200,200,.6);
+    background-color:rgba(200,200,200,.6);
     margin-right: 10px;
     width:33%;
 
