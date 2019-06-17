@@ -28,27 +28,27 @@
         <h2 id="place"><b>Franklin, Idaho</b></h2>
         <p>
             <b>Zip:</b>83237|
-            <b>Elevation:</b>1514.246|
+            <b>Elevation:</b><span id= "feet">Feet 1514.246</span>F|
             <b>Location:</b>|42.07 &deg;
             <b>Longitude:</b> 111.79|
             <b>Latitude</b>:42.07|
         </p>
-        <section id ="box">
+        <section id ="box" class="sunny">
         <section id="temp" class ="tiles">
             <h2><b>Temperature</b></h2>
             <h2><strong>40&deg;F</strong></h2>
         
             
                     <p><b id="red">High 64</b> &deg;F <b id ="blue">Low 21</b> &deg;F</p>
-                <p></p>
+                    <p id ="feelTemp">Feels like 25</p>
+                
         </section>
 
         <section id ="wind" class ="tiles">
         <h2><b>Wind</b></h2>
+        <div id="dial" class="w"></div>
         <p class="miles"><b>5mp</b></p> 
-        <img src="weather-site-images/images/wind-pointer_167.png" alt="wind" height="200" width="200">
-         
-           <p><b>Direction: SW</b></p>
+          <p><b>Direction: SW</b></p>
         <p><b>Gusts:10-12</b></p>
             
         
@@ -85,7 +85,8 @@
     </main>
     <footer id="copy">
         <p>&copy; Franklin Weather 2019</p>
-    </footer>
+       </footer>
+       <script src ="js/functions.js"></script>
 </body>
 
 </html>

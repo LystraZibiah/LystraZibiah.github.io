@@ -49,15 +49,21 @@ html{
 
 .tiles {
     border: 1px ridge black;
-    border-radius: 25px;
+    border-radius: 10px;
     text-align: center;
-    background-color:darkgray;
+    background-color:rgba(200,200,200,.6);
+    margin-right: 10px;
+    width:33%;
+
+}
+#forecast {
+    width:100%;
 }
 /* #wind h2; */
 /* #rain h2; */
 .miles {
     position: relative;
-    bottom: -134px;
+    bottom: 97px;
 }
 
 #style{
@@ -85,17 +91,88 @@ html{
     overflow: auto;
     white-space: nowrap;
   }
-'/* mobile rules */
+
+  #dial {
+    height: 150px;
+    width: 150px;
+    background: no-repeat center/85% url('weather-site-images/images/wind-pointer_167.png');
+    z-index: 100;
+    margin: -.6em auto 0;
+   }
+.w {
+    transform: rotate(270deg);
+}
+.n{
+   transform:rotate(360deg)  
+}
+.nw {
+transform: rotate(315deg);
+}
+.ne{
+transform: rotate(45deg);
+}
+.s {
+transform: rotate(180deg);
+}
+.se {
+transform: rotate(135deg);
+}
+.sw {
+transform: rotate(225deg);
+}
+.e {
+transform: rotate(90deg);
+}
+
+/* mobile rules */
   #links {
     position:fixed;
     bottom:-18px;
     background-color: blueviolet;
     }
+    #box {
+        background-size: cover;
+       }
+    /* Background pictures for summary */
+   .clear {
+    background-image: url("/responsive_media/weather-images/clear_400.jpg");
+   }
+   .rain {
+    background-image: url("/responsive_media/weather-images/rain_400.jpg");
+   }
+   .snow {
+    background-image: url("/responsive_media/weather-images/snow_400.jpg");
+   }
+   .fog {
+    background-image: url("/responsive_media/weather-images/fog_4001.jpg");
+   }
+   .clouds {
+    background-image: url("/responsive_media/weather-images/clouds_400.jpg");
+   }
 /* large wireframe  */
 @media screen and (min-width:600px){
     #box {
         display: flex;
     }
-    
-
 }
+#box {
+    background-size: cover;
+   }
+   .clear {
+    background-image: url("/responsive_media/weather-images/clear_1500.jpg");
+   }
+   .rain {
+    background-image: url("/responsive_media/weather-images/rain_1200.jpg");
+   }
+   .snow {
+    background-image: url("/responsive_media/weather-images/snow_500.jpg");
+   }
+   .fog {
+    background-image: url("/responsive_media/weather-images/fog_1791.jpg");
+   }
+   .clouds {
+    background-image: url("/responsive_media/weather-images/clouds_1200.jpg");
+   }
+
+   
+   
