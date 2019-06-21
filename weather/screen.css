@@ -123,6 +123,9 @@ transform: rotate(225deg);
 .e {
 transform: rotate(90deg);
 }
+.hide{
+    display: none;
+  }
 
 /* mobile rules */
   #links {

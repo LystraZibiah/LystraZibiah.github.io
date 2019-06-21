@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Franklin, ID | Weather Site</title>
+    <title id ="title">Franklin, ID | Weather Site</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="screen.css">
 </head>
@@ -24,7 +24,8 @@
             <li><a href='#'>Greenville</a></li>
         </ul>
     </nav>
-    <main id="page">
+    <section id="status">Please be patient while I get your weather information.</section>
+    <main id="page" class="hide">
         <h2 id="place"><b>SC</b></h2>
         <p>
             <b>Zip:</b>29601|
@@ -81,13 +82,13 @@
        </li>
      </ul>
         </section>
-
-
+</main>
     </main>
     <footer id="copy">
         <p>&copy; Franklin Weather 2019</p>
        </footer>
        <script src ="js/functions.js"></script>
+       <script src ="js/localdata.js"></script>
 </body>
 
 </html>
