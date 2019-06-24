@@ -53,7 +53,7 @@ html{
     text-align: center;
     background-color:rgba(200,200,200,.6);
     margin-right: 10px;
-    width:33%;
+    
 
 }
 #forecast {
@@ -90,6 +90,10 @@ html{
     background-color:pink;
     overflow: auto;
     white-space: nowrap;
+    display:flex;
+  }
+  #scrollbar li{
+list-style:none;
   }
 
   #dial {
@@ -138,44 +142,47 @@ transform: rotate(90deg);
        }
     /* Background pictures for summary */
    .clear {
-    background-image: url("/responsive_media/weather-images/clear_400.jpg");
+    background-image: url("../responsive_media/weather-images/clear_400.jpg");
    }
    .rain {
-    background-image: url("/responsive_media/weather-images/rain_400.jpg");
+    background-image: url("../responsive_media/weather-images/rain_400.jpg");
    }
    .snow {
-    background-image: url("/responsive_media/weather-images/snow_400.jpg");
+    background-image: url("../responsive_media/weather-images/snow_400.jpg");
    }
    .fog {
-    background-image: url("/responsive_media/weather-images/fog_4001.jpg");
+    background-image: url("../responsive_media/weather-images/fog_4001.jpg");
    }
    .clouds {
-    background-image: url("/responsive_media/weather-images/clouds_400.jpg");
+    background-image: url("../responsive_media/weather-images/clouds_400.jpg");
    }
 /* large wireframe  */
 @media screen and (min-width:600px){
     #box {
         display: flex;
     }
+    .tiles {
+        width: 33%;
 }
 #box {
     background-size: cover;
    }
    .clear {
-    background-image: url("/responsive_media/weather-images/clear_1500.jpg");
+    background-image: url("../responsive_media/weather-images/clear_1500.jpg");
    }
    .rain {
-    background-image: url("/responsive_media/weather-images/rain_1200.jpg");
+    background-image: url("../responsive_media/weather-images/rain_1200.jpg");
    }
    .snow {
-    background-image: url("/responsive_media/weather-images/snow_500.jpg");
+    background-image: url("../responsive_media/weather-images/snow_500.jpg");
    }
    .fog {
-    background-image: url("/responsive_media/weather-images/fog_1791.jpg");
+    background-image: url("../responsive_media/weather-images/fog_1791.jpg");
    }
    .clouds {
-    background-image: url("/responsive_media/weather-images/clouds_1200.jpg");
+    background-image: url("../responsive_media/weather-images/clouds_1200.jpg");
    }
+}
 
    
    

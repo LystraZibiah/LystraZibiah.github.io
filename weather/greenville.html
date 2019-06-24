@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <img src="weather-site-images/images/logo.jpg" alt="logo">
-        <h1 id="weather">Greenville</h1>
+        <h1 id="weather">The Weather Site </h1>
 
     </header>
     <nav id ="links">
@@ -28,16 +28,16 @@
     <main id="page" class="hide">
         <h2 id="place"><b>SC</b></h2>
         <p>
-            <b>Zip:</b>29601|
-            <b>Elevation:</b><span id= "feet">Feet 294.437</span>ft|
-            <b>Location:</b>|42.07 &deg;
-            <b>Longitude:</b> -82.4|
-            <b>Latitude</b>:34.85|
+            <b id ="zip">Zip:</b>|
+            <b>Elevation:</b><span id= "elevation"></span>ft|
+            <b id="location">Location:</b>|&deg;
+            <b id="longtitude">Longitude:</b>|
+            <b id="latitude">Latitude</b>|
         </p>
         <section id ="box" class="sunny">
         <section id="temp" class ="tiles">
             <h2><b>Temperature</b></h2>
-            <h2><strong>40&deg;F</strong></h2>
+            <h2><strong id="curTemp">40&deg;F</strong></h2>
         
             
                     <p><b id="red">High 72</b> &deg;F <b id ="blue">Low 51</b> &deg;F</p>
@@ -46,17 +46,17 @@
         </section>
 
         <section id ="wind" class ="tiles">
-        <h2><b>Thunderstroms</b></h2>
+        <h2><b>Wind</b></h2>
         <div id="dial" class="w"></div>
-        <p class="miles"><b>5mp</b></p> 
-          <p><b>Direction: SW</b></p>
-        <p><b>Gusts:15-17</b></p>
+        <p  id ="miles" class="miles"><b>5mp</b></p> 
+          <p><b id ="direction">Direction: SW</b></p>
+        <p><b id ="gusts">Gusts:15-17</b></p>
             
         
         </section>
 
         <section id ="rain" class="tiles">
-            <h2> Rain</h2>
+            <h2 id= "summary"> Rain</h2>
             <img src="weather-site-images/images/rain.jpg" alt="rain" height="200" width="200">
         </section>
     </section>

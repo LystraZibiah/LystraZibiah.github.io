@@ -5,7 +5,7 @@ let pageNav = document.getElementById('links');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('page');
 
-let weatherURL = "../weather.json";
+let weatherURL = "https://LystraZibiah.github.io/weather/weather.json";
 fetchData(weatherURL);
 function fetchData(weatherURL){
   let cityName = 'Greenville'; // The data we want from the weather.json file
@@ -28,6 +28,11 @@ function fetchData(weatherURL){
     // Get the location data
     let locName = g.City;
     let locState = g.State;
+    let elevation =g.Elevation;
+    let longtitude=g.Longtitude;
+    let latitude=g.Latitude;
+    let zip =g.Zip;
+    console.log(zip);
     // Put them together
     let fullName = locName+', '+locState;
     // See if it worked
@@ -36,15 +41,21 @@ function fetchData(weatherURL){
     // Get the temperature data
         let high =g.High;
         let low =g.Low;
-        let Temp =g.Temp;
-        let precip=g.Precip
+        let temp =g.Temp;
+        let precip=g.Precip;
+        console.log(temp);
     // Get the wind data 
-
+    let wind =g.Wind;
+    let direction= g.Direction;
+    let gusts =g.Gusts;
+    console.log(wind);
 
     // Get the current conditions
 
-
+let cur = g.Summary;
     // Get the hourly data 
+    let hour = g.Hourly;
+    console.log(hour);
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -59,22 +70,32 @@ function fetchData(weatherURL){
 
     // Set the Location information
     // Get the h1 to display the city location
-    let contentHeading = document.getElementById('weather');
+    let contentHeading = document.getElementById('place');
     contentHeading.innerHTML = fullName;
+    document.getElementById("elevation").innerHTML=elevation;
+    document.getElementById("longtitude").innerHTML=longtitude;
+    document.getElementById("latitude").innerHTML=latitude;
+    document.getElementById("zip").innerHTML=zip;
+    
     // The h1 in main h1 should now say "Greenville, SC"
 
-
     // Set the temperature information
+    document.getElementById("curTemp").innerHTML= temp;
+    buildWC(wind,temp);
+    document.getElementById("direction").innerHTML=direction;
+    document.getElementById("gusts").innerHTML=gusts;
+    document.getElementById("elevation").innerHTML=convertMetersToFeet(meters,elevation);
 
 
     // Set the wind information
 
-
+    document.getElementById("miles").innerHTML= wind;
     // Set the current conditions information
 
-
+document.getElementById("summary").innerHTML=cur;
     // Set the hourly temperature information
-
+    
+    document.getElementById("scrollbar").innerHTML=buildHourlyData(nextHour,hour);
 
     // Change the status of the containers
     contentContainer.setAttribute('class', ''); // removes the hide class
