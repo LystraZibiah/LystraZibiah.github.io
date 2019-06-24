@@ -182,7 +182,13 @@ transform: rotate(90deg);
    .clouds {
     background-image: url("../responsive_media/weather-images/clouds_1200.jpg");
    }
+   #links {
+    position:static;
+    background-color: blueviolet;
+    }
 }
+        
+
 
    
    
