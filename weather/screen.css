@@ -1,194 +1,194 @@
-/*imports 
-General 
-Mobile 
-Larger(er)Screens */
+        /*imports 
+        General 
+        Mobile 
+        Larger(er)Screens */
 
-/* 1. Imports */
-@import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
-@import url('normalize.css');
-
-
-/*2.General Rules*/
-h1,h2,h3,h4,h5,h6{
-    font-family:Sanista, sans-serif;
-}
-html{
-    box-sizing: border-box;
-}
-
-.hide{
-     display:none;
- }
+        /* 1. Imports */
+        @import url('https://fonts.googleapis.com/css?family=Sansita&display=swap');
+        @import url('normalize.css');
 
 
- #weather h1 {
-    text-align: center;
-    list-style: none;
-    display: flex;
+        /*2.General Rules*/
+        h1,h2,h3,h4,h5,h6{
+            font-family:Sanista, sans-serif;
+        }
+        html{
+            box-sizing: border-box;
+        }
 
-}
+        .hide{
+            display:none;
+        }
 
-.header {
-    display: flex;
-    background-color: #0e89d5;
-}
-.do li{
-    display: flex;
-}
 
-#copy {
-    display: flex;
-    background-color: #0e89d5; 
-}
+        #weather h1 {
+            text-align: center;
+            list-style: none;
+            display: flex;
 
-#place h2{
-    display:flex;
-    background-color:white;
-}
-/* #temp h2; */
+        }
 
-.tiles {
-    border: 1px ridge black;
-    border-radius: 10px;
-    text-align: center;
-    background-color:rgba(200,200,200,.6);
-    margin-right: 10px;
-    
+        .header {
+            display: flex;
+            background-color: #0e89d5;
+        }
+        .do li{
+            display: flex;
+        }
 
-}
-#forecast {
-    width:100%;
-}
-/* #wind h2; */
-/* #rain h2; */
-.miles {
-    position: relative;
-    bottom: 97px;
-}
+        #copy {
+            display: flex;
+            background-color: #0e89d5; 
+        }
 
-#style{
-    list-style-type:none;
-    display: flex;
-    
-}
-#style li{
-    margin-right: 10px;
-    
-}
-#style a {
-    color: white;
-    text-align: center;
-    
-}
-#red {
-    color: red;
-}
-#blue{
-    color:blue;
-}
-#scrollbar{
-    background-color:pink;
-    overflow: auto;
-    white-space: nowrap;
-    display:flex;
-  }
-  #scrollbar li{
-list-style:none;
-  }
+        #place h2{
+            display:flex;
+            background-color:white;
+        }
+        /* #temp h2; */
 
-  #dial {
-    height: 150px;
-    width: 150px;
-    background: no-repeat center/85% url('weather-site-images/images/wind-pointer_167.png');
-    z-index: 100;
-    margin: -.6em auto 0;
-   }
-.w {
-    transform: rotate(270deg);
-}
-.n{
-   transform:rotate(360deg)  
-}
-.nw {
-transform: rotate(315deg);
-}
-.ne{
-transform: rotate(45deg);
-}
-.s {
-transform: rotate(180deg);
-}
-.se {
-transform: rotate(135deg);
-}
-.sw {
-transform: rotate(225deg);
-}
-.e {
-transform: rotate(90deg);
-}
-.hide{
-    display: none;
-  }
+        .tiles {
+            border: 1px ridge black;
+            border-radius: 10px;
+            text-align: center;
+            background-color:rgba(200,200,200,.6);
+            margin-right: 10px;
+            
 
-/* mobile rules */
-  #links {
-    position:fixed;
-    bottom:-18px;
-    background-color: blueviolet;
-    }
-    #box {
-        background-size: cover;
-       }
-    /* Background pictures for summary */
-   .clear {
-    background-image: url("../responsive_media/weather-images/clear_400.jpg");
-   }
-   .rain {
-    background-image: url("../responsive_media/weather-images/rain_400.jpg");
-   }
-   .snow {
-    background-image: url("../responsive_media/weather-images/snow_400.jpg");
-   }
-   .fog {
-    background-image: url("../responsive_media/weather-images/fog_4001.jpg");
-   }
-   .clouds {
-    background-image: url("../responsive_media/weather-images/clouds_400.jpg");
-   }
-/* large wireframe  */
-@media screen and (min-width:600px){
-    #box {
-        display: flex;
-    }
-    .tiles {
-        width: 33%;
-}
-#box {
-    background-size: cover;
-   }
-   .clear {
-    background-image: url("../responsive_media/weather-images/clear_1500.jpg");
-   }
-   .rain {
-    background-image: url("../responsive_media/weather-images/rain_1200.jpg");
-   }
-   .snow {
-    background-image: url("../responsive_media/weather-images/snow_500.jpg");
-   }
-   .fog {
-    background-image: url("../responsive_media/weather-images/fog_1791.jpg");
-   }
-   .clouds {
-    background-image: url("../responsive_media/weather-images/clouds_1200.jpg");
-   }
-   #links {
-    position:static;
-    background-color: blueviolet;
-    }
-}
+        }
+        #forecast {
+            width:100%;
+        }
+        /* #wind h2; */
+        /* #rain h2; */
+        .miles {
+            position: relative;
+            bottom: 97px;
+        }
+
+        #style{
+            list-style-type:none;
+            display: flex;
+            
+        }
+        #style li{
+            margin-right: 10px;
+            
+        }
+        #style a {
+            color: white;
+            text-align: center;
+            
+        }
+        #red {
+            color: red;
+        }
+        #blue{
+            color:blue;
+        }
+        #scrollbar{
+            background-color:pink;
+            overflow: auto;
+            white-space: nowrap;
+            display:flex;
+        }
+        #scrollbar li{
+        list-style:none;
+        }
+
+        #dial {
+            height: 150px;
+            width: 150px;
+            background: no-repeat center/85% url('weather-site-images/images/wind-pointer_167.png');
+            z-index: 100;
+            margin: -.6em auto 0;
+        }
+        .w {
+            transform: rotate(270deg);
+        }
+        .n{
+        transform:rotate(360deg)  
+        }
+        .nw {
+        transform: rotate(315deg);
+        }
+        .ne{
+        transform: rotate(45deg);
+        }
+        .s {
+        transform: rotate(180deg);
+        }
+        .se {
+        transform: rotate(135deg);
+        }
+        .sw {
+        transform: rotate(225deg);
+        }
+        .e {
+        transform: rotate(90deg);
+        }
+        .hide{
+            display: none;
+        }
+
+        /* mobile rules */
+        #links {
+            position:fixed;
+            bottom:-18px;
+            background-color: blueviolet;
+            }
+            #box {
+                background-size: cover;
+            }
+            /* Background pictures for summary */
+        .clear {
+            background-image: url("../responsive_media/weather-images/clear_400.jpg");
+        }
+        .rain {
+            background-image: url("../responsive_media/weather-images/rain_400.jpg");
+        }
+        .snow {
+            background-image: url("../responsive_media/weather-images/snow_400.jpg");
+        }
+        .fog {
+            background-image: url("../responsive_media/weather-images/fog_4001.jpg");
+        }
+        .clouds {
+            background-image: url("../responsive_media/weather-images/clouds_400.jpg");
+        }
+        /* large wireframe  */
+        @media screen and (min-width:600px){
+            #box {
+                display: flex;
+            }
+            .tiles {
+                width: 33%;
+        }
+        #box {
+            background-size: cover;
+        }
+        .clear {
+            background-image: url("../responsive_media/weather-images/clear_1500.jpg");
+        }
+        .rain {
+            background-image: url("../responsive_media/weather-images/rain_1200.jpg");
+        }
+        .snow {
+            background-image: url("../responsive_media/weather-images/snow_500.jpg");
+        }
+        .fog {
+            background-image: url("../responsive_media/weather-images/fog_1791.jpg");
+        }
+        .clouds {
+            background-image: url("../responsive_media/weather-images/clouds_1200.jpg");
+        }
+        #links {
+            position:static;
+            background-color: blueviolet;
+            }
+        }
+                
+
+
         
-
-
-   
-   
+        
