@@ -28,9 +28,9 @@ function fetchData(weatherURL){
     // Get the location data
     let locName = g.City;
     let locState = g.State;
-    let elevation =g.Elevation;
-    let longtitude=g.Longtitude;
-    let latitude=g.Latitude;
+    let elevation = g.Elevation;
+    let longitude= g.Longitude;
+    let latitude= g.Latitude;
     let zip =g.Zip;
     console.log(zip);
     // Put them together
@@ -72,10 +72,11 @@ let cur = g.Summary;
     // Get the h1 to display the city location
     let contentHeading = document.getElementById('place');
     contentHeading.innerHTML = fullName;
-    document.getElementById("elevation").innerHTML=elevation;
-    document.getElementById("longtitude").innerHTML=longtitude;
-    document.getElementById("latitude").innerHTML=latitude;
-    document.getElementById("zip").innerHTML=zip;
+    convertMetersToFeet(elevation);
+    document.getElementById("longitude").innerHTML= "Longitude : " + longitude;
+    document.getElementById("latitude").innerHTML="Latitude : " + latitude;
+    document.getElementById("zip").innerHTML="Zip :" + zip;
+
     
     // The h1 in main h1 should now say "Greenville, SC"
 
@@ -84,15 +85,18 @@ let cur = g.Summary;
     buildWC(wind,temp);
     document.getElementById("direction").innerHTML=direction;
     document.getElementById("gusts").innerHTML=gusts;
-    document.getElementById("elevation").innerHTML=convertMetersToFeet(meters,elevation);
+   
 
 
     // Set the wind information
 
     document.getElementById("miles").innerHTML= wind;
+    windDial(direction);
     // Set the current conditions information
 
 document.getElementById("summary").innerHTML=cur;
+let climate = getcondition(cur);
+ changeSummaryImage(climate);
     // Set the hourly temperature information
     
     document.getElementById("scrollbar").innerHTML=buildHourlyData(nextHour,hour);

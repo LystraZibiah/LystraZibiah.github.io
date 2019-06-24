@@ -85,7 +85,7 @@ if(weatherconditions=="clear" || weatherconditions.includes("sunny") || weatherc
 else if(weatherconditions.includes("cloudy")||weatherconditions.includes("bluesky")||weatherconditions.includes("partly cloudy")){
    return "cloudy";
 }
-else if( weatherconditions.includes("rainy")||weatherconditions.includes("umbrella time")||weatherconditions.includes("drizzling")){
+else if( weatherconditions.includes("rainy")||weatherconditions.includes("Thunderstorms")||weatherconditions.includes("drizzling")){
    return "rainy";
 }
 else if( weatherconditions.includes("snowy")||weatherconditions.includes("freezing")||weatherconditions.includes("cold")){
