@@ -11,15 +11,11 @@ pageNav.addEventListener('click',function(evt){
  let CityName = evt.target. innerHTML;
  switch (cityName) {
    case "Franklin":
-      case"GreenVille":
+      case"Greenville":
       case "Springfield":
         evt.preventDefault();
       break;
  }
-
-
-let hourlyList =document.getElementById("hourlyData");
-
 
 let weatherURL = "https://LystraZibiah.github.io/weather/weather.json";
 //fetchData(weatherURL);
