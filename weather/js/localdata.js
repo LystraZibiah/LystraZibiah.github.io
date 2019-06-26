@@ -5,10 +5,26 @@ let pageNav = document.getElementById('links');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('page');
 
+pageNav.addEventListener('click',function(evt){
+ 
+  // Get the city name 
+ let CityName = evt.target. innerHTML;
+ switch (cityName) {
+   case "Franklin":
+      case"GreenVille":
+      case "Springfield":
+        evt.preventDefault();
+      break;
+ }
+
+
+let hourlyList =document.getElementById("hourlyData");
+
+
 let weatherURL = "https://LystraZibiah.github.io/weather/weather.json";
-fetchData(weatherURL);
-function fetchData(weatherURL){
-  let cityName = 'Greenville'; // The data we want from the weather.json file
+//fetchData(weatherURL);
+//function fetchData(weatherURL){
+  //let cityName = 'Greenville'; // The data we want from the weather.json file
   fetch(weatherURL)
   .then(function(response) {
   if(response.ok){
@@ -109,4 +125,6 @@ let climate = getcondition(cur);
   console.log('There was a fetch problem: ', error.message);
   statusContainer.innerHTML = 'Sorry, the data could not be processed.';
   })
-}
+
+//}...ends function
+})
