@@ -1,12 +1,17 @@
 'use strict';
 
+
 getGeoLocation();
 
 var storage = window.localStorage;
-console.log(`Lat and Long are: ${locale}.`);
+// Set global variable for custom header required by NWS API
+var idHeader = {
+    headers: {
+      "User-Agent": "Student Learning Project - zib15001@byui.edu"
+    }
+  };
+// Call getLocation function, send locale
 
-  // Call getLocation function, send locale
-  getLocation(locale);
 // Gets longitude and latitude of current location
 function getGeoLocation() {
     const status = document.getElementById('status');
@@ -19,6 +24,8 @@ if (navigator.geolocation) {
      const long = position.coords.longitude;
    // Combine the values
      const locale = lat + "," + long;
+     console.log(`Lat and Long are: ${locale}.`);
+     getLocation(locale);
       })
    } else {
     status.innerHTML = "Your browser doesn't support Geolocation or it is not enabled!";
@@ -98,6 +105,8 @@ function getWeather(stationId) {
       console.log(data);
     
       // Store weather information to localStorage 
+      storage.setItem(); 
+      storage.setItem(); 
    
    
       // Build the page for viewing 
