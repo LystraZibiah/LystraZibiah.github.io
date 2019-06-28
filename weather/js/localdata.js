@@ -5,14 +5,14 @@ let pageNav = document.getElementById('links');
 let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('page');
 
-pageNav.addEventListener('click',function(evt){
+pageNav.addEventListener('click', function(evt) {
  
   // Get the city name 
- let CityName = evt.target. innerHTML;
+ let cityName = evt.target. innerHTML;
  switch (cityName) {
-   case "Franklin":
-      case"Greenville":
-      case "Springfield":
+   case"Franklin":
+    case"Greenville":
+      case"Springfield":
         evt.preventDefault();
       break;
  }
