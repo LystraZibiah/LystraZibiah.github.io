@@ -105,12 +105,17 @@ function getWeather(stationId) {
       console.log(data);
     
       // Store weather information to localStorage 
-      storage.setItem(); 
-      storage.setItem(); 
-   
-   
+      storage.setItem("elavtion",data.properties.elevation.value); 
+      storage.setItem("max",data.properties.maxTemperatureLast24Hours.value); 
+      storage.setItem("min",data.properties.minTemperatureLast24Hours.value); 
+      storage.setItem("temprature",data.properties.temperature.value); 
+      storage.setItem("windchill",data.properties.windChill.value); 
+      storage.setItem("winddirection",data.properties.windDirection.value);
+      storage.setItem("windspeed",data.properties.windSpeed.value);
+      storage.setItem("windGusts",data.properties.windGust.value);
       // Build the page for viewing 
-      
+    buildPage();
+    
      }) 
     .catch(error => console.log('There was a getWeather error: ', error)) 
    } // end getWeather function
