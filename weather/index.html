@@ -5,40 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Franklin, ID | Weather Site</title>
+    <title id ="title">| Weather Site</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="screen.css">
 </head>
-
+<!-- Name: Lystra Zibiah Thamizhmaran -->
+<!-- People in my Group -->
+<!-- Name: Kianna Baird -->
+<!-- Name:Serena Spotten -->
 <body>
     <header class="header">
         <img src="weather-site-images/images/logo.jpg" alt="logo">
-        <h1 id="weather">The Weather Site</h1>
+        <h1 id="weather">The Weather Site </h1>
 
     </header>
     <nav id ="links">
         <ul id ="style">
             <li class="do"><a href='index.html'>Current</a></li>
-            <li><a href='franklin.html'>Franklin</a></li>
-            <li><a href='greenville.html'>Greenville</a></li>
+            <li> <a href ='#'>Search</a></li>
+            <li> <a href ='franklin.html'>Franklin</a></li>
+            <li> <a href ='greenville.html'>Greenville</a></li>
+            <li> <a href ='#'>Springfield</a></li>
+
         </ul>
     </nav>
-    <main id="page">
-        <h2 id="place"><b>Franklin, Idaho</b></h2>
+    <section id="status">Please be patient while I get your weather information.</section>
+    <main id="page" class="see">
+        <h2 id="place"></h2>
         <p>
-            <b>Zip:</b>83237|
-            <b>Elevation:</b><span id= "feet">Feet 1514.246</span>F|
-            <b>Location:</b>|42.07 &deg;
-            <b>Longitude:</b> 111.79|
-            <b>Latitude</b>:42.07|
+            <b id ="zip">Zip:</b>|
+            <b id = "height">Elevation:</b><span id= "elevation"></span>ft|
+            <b id="longitude">Longitude:</b>|
+            <b id="latitude">Latitude</b>|
         </p>
         <section id ="box" class="sunny">
         <section id="temp" class ="tiles">
             <h2><b>Temperature</b></h2>
-            <h2><strong>40&deg;F</strong></h2>
+            <h2><strong id="curTemp">40&deg;F</strong></h2>
         
             
-                    <p><b id="red">High 64</b> &deg;F <b id ="blue">Low 21</b> &deg;F</p>
+                    <p><b id="red">High 72</b> &deg;F <b id ="blue">Low 51</b> &deg;F</p>
                     <p id ="feelTemp">Feels like 25</p>
                 
         </section>
@@ -46,16 +52,16 @@
         <section id ="wind" class ="tiles">
         <h2><b>Wind</b></h2>
         <div id="dial" class="w"></div>
-        <p class="miles"><b>5mp</b></p> 
-          <p><b>Direction: SW</b></p>
-        <p><b>Gusts:10-12</b></p>
+        <p  id ="miles" class="miles"><b>5mp</b></p> 
+          <p><b id ="direction">Direction: SW</b></p>
+        <p><b id ="gusts">Gusts:15-17</b></p>
             
         
         </section>
 
         <section id ="rain" class="tiles">
-            <h2> Rain</h2>
-            <img src="weather-site-images/images/rain.jpg" alt="rain" height="200" width="200">
+            <h2 id= "summary"> Rain</h2>
+           <div id ="smallframe"></div>
         </section>
     </section>
         
@@ -80,13 +86,13 @@
        </li>
      </ul>
         </section>
-
-
-    </main>
+</main>
     <footer id="copy">
-        <p>&copy; Franklin Weather 2019</p>
+        <p>&copy; Greenville 2019</p>
        </footer>
        <script src ="js/functions.js"></script>
+       <script src ="js/geo_loc.js"></script>
+       
 </body>
 
 </html>

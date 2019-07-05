@@ -130,6 +130,10 @@
         .hide{
             display: none;
         }
+        #smallframe {
+            width: 250px;
+            height: 250px;
+        }
 
         /* mobile rules */
         #links {

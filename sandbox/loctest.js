@@ -114,9 +114,75 @@ function getWeather(stationId) {
       storage.setItem("windspeed",data.properties.windSpeed.value);
       storage.setItem("windGusts",data.properties.windGust.value);
       // Build the page for viewing 
-    buildPage();
-    
+      getHourly();
      }) 
     .catch(error => console.log('There was a getWeather error: ', error)) 
    } // end getWeather function
-  
+  //Hourly function
+  function getHourly() { 
+      const URL= "https://api.weather.gov/gridpoints/PIH/125,87/forecast/hourly";
+    // NWS User-Agent header (built above) will be the second parameter 
+    fetch(URL, idHeader) 
+    .then(function(response){
+      if(response.ok){ 
+       return response.json(); 
+      } 
+      throw new ERROR('Response not OK.');
+    })
+    .then(function (data) { 
+      // Let's see what we got back
+      console.log('From getHourly function:'); 
+      console.log(data);
+
+      // Store data to hourly data
+      storage.setItem("hour1",data.properties.periods[0].temperature); 
+      storage.setItem("hour2",data.properties.periods[1].temperature); 
+      storage.setItem("hour3",data.properties.periods[2].temperature); 
+      storage.setItem("hour4",data.properties.periods[3].temperature); 
+      storage.setItem("hour5",data.properties.periods[4].temperature); 
+      storage.setItem("hour6",data.properties.periods[5].temperature);
+      storage.setItem("hour7",data.properties.periods[6].temperature);
+      storage.setItem("hour8",data.properties.periods[7].temperature);
+      storage.setItem("hour9",data.properties.periods[8].temperature);
+      storage.setItem("hour10",data.properties.periods[9].temperature);
+      storage.setItem("hour11",data.properties.periods[10].temperature);
+      storage.setItem("hour12",data.properties.periods[11].temperature);
+      storage.setItem("hour13",data.properties.periods[12].temperature);
+      
+      var listhours = [];
+      var i;
+      for(i=0; i < 13; i++){
+          listhours+= data.properties.periods[i].temperature + ", ";
+      }
+      storage.setItem("hour", listhours);
+    //   getting forecast
+    getForecast();
+    })
+    .catch(error => console.log('There was a getStationId error: ', error)) 
+   } // end getStationId function
+   
+      // Request the Current Weather for this station 
+
+   function getForecast() { 
+    const URL= "https://api.weather.gov/gridpoints/PIH/125,87/forecast";
+  // NWS User-Agent header (built above) will be the second parameter 
+  fetch(URL, idHeader) 
+  .then(function(response){
+    if(response.ok){ 
+     return response.json(); 
+    } 
+    throw new ERROR('Response not OK.');
+  })
+  .then(function (data) { 
+    // Let's see what we got back
+    console.log('From getForecast function:'); 
+    console.log(data);
+
+     // Store Forecast
+storage.setItem("high",data.properties.periods[0].temperature); 
+storage.setItem("low",data.properties.periods[1].temperature); 
+   
+})
+     
+.catch(error => console.log('There was a getForecast error: ', error))
+} // end getStationId function
