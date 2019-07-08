@@ -310,11 +310,13 @@ function getWeather(stationId) {
       var listhours = [];
       var i;
       for(i=0; i < 13; i++){
-          listhours+= Number(data.properties.periods[i].temperature);
+          listhours[i]= data.properties.periods[i].temperature;
       }
       storage.setItem("hour", listhours);
       
    let hour =buildHourlyData(nextHour,listhours);
+   storage.setItem("time", hour);
+
    console.log(hour)
 
     //   getting forecast
@@ -344,6 +346,7 @@ function getWeather(stationId) {
      // Store Forecast
 storage.setItem("high",data.properties.periods[0].temperature); 
 storage.setItem("low",data.properties.periods[1].temperature); 
+storage.setItem("speed",data.properties.periods[0].windSpeed); 
    buildPage();
 })
      
@@ -399,17 +402,16 @@ function buildPage(){
    // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
    convertMetersToFeet(storage.getItem('elavtion'));
    // function fro Windchill
-   buildWC(storage.getItem('windspeed'),storage.getItem('temprature'));
+   buildWC(storage.getItem('windspeed'),convert(storage.getItem('temprature')));
    //function for dial
-   let wind = dial(storage.getItem('winddirection'));
+   let wind = dial(Number(storage.getItem('winddirection')));
      windDial(wind);
      console.log(wind);
-   let celcius = convert(storage.getItem('temprature'));
+   let celcius = convert(storage.getItem('temprature')) + "&deg;F";
   console.log(celcius);
   document.getElementById('curTemp').innerHTML=celcius;
 //   hourly data
-let list=buildHourlyData(storage.getItem('nextHour'),storage.getItem('listhours'));
-document.getElementById('forecast').innerHTML=list;
+document.getElementById('scrollbar').innerHTML=storage.getItem('time');
 
 
 
@@ -439,11 +441,28 @@ let local = city + ", " +state;
     
     
    // Task 2 - Populate location information
-document.getElementById('locName').innerHTML = locName +"," + locState;
+    document.getElementById('longitude').innerHTML="Longtitude: " +Number(storage.getItem('long')).toFixed(0);
+    document.getElementById('latitude').innerHTML="Latitude: " +Number(storage.getItem('lat')).toFixed(0);
+
 
    // Task 3 - Populate weather information
-
+   
+   document.getElementById('red').innerHTML= storage.getItem('high');
+   
+    document.getElementById('blue').innerHTML= storage.getItem('low');
+   
+    document.getElementById('miles').innerHTML= storage.getItem('windspeed');
+   
+    document.getElementById('direction').innerHTML= "Dicrection:"+ wind; 
+   
+    document.getElementById('gusts').innerHTML= "Gusts:"+ storage.getItem('speed');
+   
+   
+  
+    
    // Task 4 - Hide status and show main
+   let statusContainer = document.getElementById('status');
+let contentContainer = document.getElementById('page');
 
    contentContainer.setAttribute('class', ''); // removes the hide class
    statusContainer.setAttribute('class', 'hide'); // hides the status container
