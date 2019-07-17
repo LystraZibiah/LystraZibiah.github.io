@@ -18,9 +18,9 @@ function navigation(){
       console.log(data);
 names=Object.keys(data);
 console.log(names);
-let stuff ="<li><a href= '#'>Home</a></li>";
+let stuff ="<li><a href= 'index.html'>Home</a></li>";
 for(i=0;i<names.length; i++){
-  stuff+="<li><a href= '#'>" +names[i]+ "</a></li>";
+  stuff+="<li><a href= '" + names[i].toLowerCase()  + ".html' >" +names[i]+ "</a></li>";
 }
 console.log(stuff);
 document.getElementById("content").innerHTML=stuff;
@@ -33,8 +33,9 @@ document.getElementById("content").innerHTML=stuff;
   links.addEventListener('click', function(evt) {
  
     // Get navigation
-   let navname = evt.target. innerHTML;
-   let homepage= document.getElementById('home');
+   let navname = evt.target.innerHTML;
+  document.getElementById('title').innerHTML=navname + " |Acme";
+   let homepage= document.getElementById('first');
   let product = document.getElementById('product');
    switch (navname) {
      case"Home":
@@ -42,6 +43,7 @@ document.getElementById("content").innerHTML=stuff;
         product.setAttribute('class', 'hide'); // hides the status container
       break;
       default:
+          evt.preventDefault();
           const URL = "https://LystraZibiah.github.io/acme/js/acme.json";
           fetch(URL)
           .then(function(response){
@@ -72,9 +74,9 @@ document.getElementById("content").innerHTML=stuff;
             document.getElementById('categoryN').innerHTML= title;
             document.getElementById('categoryI').setAttribute("src", p);
             document.getElementById('description').innerHTML=des;
-            document.getElementById('made').innerHTML=man;
-            document.getElementById('reviews').innerHTML=re;
-            document.getElementById('price').innerHTML=pr;
+            document.getElementById('made').innerHTML= "Made By:"+man;
+            document.getElementById('reviews').innerHTML= "Review By:"+re;
+            document.getElementById('price').innerHTML= "Price:"+ pr;
 
      
           }) 

@@ -14,18 +14,25 @@ body{
   background-image:URL(../images/site/background.jpg);
 background-repeat: no-repeat;
 background-size:cover;
-/* margin-right: 10px; */
+ margin:0 50px;
 }
 #box{
   width:100%;
 }
 #box img{
-  width:40%;
+  width:30%;
 }
-#white {
+main, header , footer{
   background-color:white;
   background-size:cover;
 }
+h1, hr{
+  margin-top: 0;
+}
+footer{
+  text-align: center;
+}
+
 #welcome{
   font-size: 30pt;
 }
@@ -34,7 +41,7 @@ hr{
   height:1mm;
 }
 #content {
-    background-color: red; 
+    background-color:#de2226; 
   flex-wrap: wrap;
   width: 100%;
   height:10mm;
@@ -47,13 +54,19 @@ hr{
     list-style-type: none;
     display:inline-block;
     display:flex;
-}
+  }
+  /* nav li{
+   
+  } */
+  
 nav a{
   color:white;
+  text-decoration: none;
 }
 
   #rabbit img {
    width:100%;
+   
   }
 
 #rocket li{
@@ -61,48 +74,102 @@ nav a{
   color:#990033;
   
 }
+#main{
+  position: relative;
+}
 #rocket {
-  position:relative;
-  bottom: 500px;
- left:850px;
-  font-size:20pt;
-  width:50%;
+  /* display: flex;
+ flex-flow: column;
+margin-left:60px; */
+
+
+position: absolute;
+   top: 50px;
+right :20px; 
+  font-size:18pt;
+  /* width:50%;  */
 }
 #feature {
   font-size:20pt;
 }
-#review{
-  position: relative;
-  bottom:220px;
-  left:850px;
-  font-size:12pt;
-}
-#recipies{
-  position: relative;
-  bottom: 350px;
-}
+ /* #review{
+margin-left:500px;
+
+} */
 .boxes{
   width: 300px;
- height: 100px;
-  
+ /* height: 100px; */
+text-align: center;
+text-decoration: underline;
+ color:#0000ee;
+ /* justify-content:space-between; */
+}
+#inline{
+  display:flex;
+  flex-flow: row-reverse;
+  padding:30px; 
+
 }
 #images{
-  display:flex;
- flex-flow:row-wrap;
+  width:50%;
+  display:grid;
+  grid-column-gap:0px;
+  grid-template-columns: auto auto;
+
+}
+.box1{
+  grid-column-start: 1;
+  grid-column-end:2 ;
+}
+.box3{
+  grid-column-start: 1;
+  grid-column-end:2 ;
 }
 
 .hide{
   display:none;
 }
+/* The second Section of the css */
+#categoryN {
+  font-size:50pt;
+  color: #000000;
+  padding:0px;
+}  
+#categoryI{
+  height:22em;
+  width:24em;
+}
+#line {
+  display: flex;
+}
+#description{
+  font-size:20pt;
+  justify-content: center;
+  padding:30px;
+}
+#right{
+  margin-left: 500px;
+}
     
-    /* font-size: 10px;
-    color:red;
-    */
-
+#price{
+  color:red;
+  font-size:50pt;
+}
 
 
   
-/* mobile rules *
+/* mobile rules */
 
 
-  /* large wireframe /*
+   large wireframe 
+   @media screen and (min-width:600px){
+  #box{
+    display:flex;
+  }
+  #inline{
+    display:flex;
+    padding:30px; 
+  }
+  #rocket {
+    position:fixed;
+  }
