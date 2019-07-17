@@ -20,7 +20,7 @@ names=Object.keys(data);
 console.log(names);
 let stuff ="<li><a href= 'index.html'>Home</a></li>";
 for(i=0;i<names.length; i++){
-  stuff+="<li><a href= '" + names[i].toLowerCase()  + ".html' >" +names[i]+ "</a></li>";
+  stuff+="<li><a href= '" +names[i].toLowerCase() +".html' >" +names[i]+ "</a></li>";
 }
 console.log(stuff);
 document.getElementById("content").innerHTML=stuff;
@@ -30,7 +30,7 @@ document.getElementById("content").innerHTML=stuff;
    } // end acme.jason function
    let links= document.getElementById("content");
   
-  links.addEventListener('click', function(evt) {
+  links.addEventListener('click',function(evt) {
  
     // Get navigation
    let navname = evt.target.innerHTML;

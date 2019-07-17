@@ -90,31 +90,6 @@ margin-left:500px;
   display:none;
 }
 /* The second Section of the css */
-#categoryN {
-  font-size:50pt;
-  color: #000000;
-  padding:0px;
-}  
-#categoryI{
-  height:22em;
-  width:24em;
-}
-#line {
-  display: flex;
-}
-#description{
-  font-size:20pt;
-  justify-content: center;
-  padding:30px;
-}
-#right{
-  margin-left: 500px;
-}
-    
-#price{
-  color:red;
-  font-size:50pt;
-}
 
 #images{
   width: 89%;
@@ -164,8 +139,36 @@ nav li {
 #welcome{
   font-size: 18pt;
 }
+#categoryI{
+  height: 8em;
+  width: 6em;
+}
+#categoryN {
+  font-size: 17pt;
+  color: #000000;
+  padding: 0px;
+}
+#right {
+  margin-left: 116px;
+}
 
-
+#price{
+color: red;
+font-size: 27pt;
+}
+#description {
+  font-size: 7pt;
+  text-align: justify;
+  }
+  #line{
+    display: flex;
+  }
+#made{
+  font-size:10pt;
+}
+#reviews{
+  font-size:10pt;
+}
 
    /* large wireframe  */
    @media screen and (min-width:600px){
@@ -216,4 +219,35 @@ nav li {
    margin:0;
    grid-column-gap:0px;
  }
- }
+ #categoryN {
+  font-size: 32pt;
+  color: #000000;
+  padding: 0px
+}  
+#categoryI{
+height:22em;
+width:24em;
+}
+#line {
+display: flex;
+}
+#description{
+font-size:20pt;
+justify-content: center;
+padding:30px;
+}
+#right{
+margin-left: 500px;
+}
+  
+#price{
+color:red;
+font-size:50pt;
+}
+
+#made{
+  font-size:20pt;
+}
+#reviews{
+  font-size:20pt;
+}}
